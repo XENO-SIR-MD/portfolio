@@ -3,42 +3,263 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My GitHub Project</title>
+  <title>Adithyan | Developer Portfolio</title>
   <style>
-    body {
-      font-family: system-ui, sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
+    :root {
+      --bg: #0d1117;
+      --card-bg: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-muted: #8b949e;
+      --accent: #58a6ff;
+      --accent-green: #238636;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
       margin: 0;
-      background-color: #0d1117;
-      color: #c9d1d9;
+      padding: 0;
     }
-    button {
-      padding: 10px 20px;
-      font-size: 16px;
-      border: none;
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    header {
+      margin-bottom: 3rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 2rem;
+    }
+
+    .profile-header {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .profile-avatar {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      border: 2px solid var(--accent);
+      object-fit: cover;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: var(--white);
+      margin-bottom: 0.2rem;
+    }
+
+    .tagline {
+      font-size: 1.25rem;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    .bio {
+      color: var(--text-muted);
+      font-size: 1rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      color: var(--white);
+      margin-bottom: 1.5rem;
+      border-bottom: 2px solid var(--accent);
+      display: inline-block;
+      padding-bottom: 0.25rem;
+    }
+
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .skill-tag {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border);
+      color: var(--accent);
+      padding: 0.4rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 600px) {
+      .projects-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .project-card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.5rem;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--accent);
+    }
+
+    .project-title {
+      font-size: 1.2rem;
+      color: var(--white);
+      margin-bottom: 0.5rem;
+    }
+
+    .project-desc {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
+    .project-links a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+
+    .project-links a:hover {
+      text-decoration: underline;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .social-btn {
+      display: inline-block;
+      background-color: var(--card-bg);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 0.5rem 1rem;
       border-radius: 6px;
-      background-color: #238636;
-      color: white;
-      cursor: pointer;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.9rem;
+      transition: border-color 0.2s ease;
     }
-    button:hover {
+
+    .social-btn:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .contact-btn {
+      display: inline-block;
+      background-color: var(--accent-green);
+      color: var(--white);
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .contact-btn:hover {
       background-color: #2ea043;
+    }
+
+    footer {
+      text-align: center;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
-  <h1>Hello, GitHub! 🚀</h1>
-  <p>My project is live.</p>
-  <button id="btn">Click Me</button>
 
-  <script>
-    document.getElementById('btn').addEventListener('click', () => {
-      alert('Code is running successfully!');
-    });
-  </script>
+  <div class="container">
+    <header>
+      <div class="profile-header">
+        <!-- Add your GitHub profile photo URL below -->
+        <img src="https://github.com/github.png" alt="Adithyan" class="profile-avatar">
+        <div>
+          <h1>Adithyan</h1>
+          <p class="tagline">Full-Stack Developer & Software Engineer</p>
+        </div>
+      </div>
+      
+      <p class="bio">Building modern web applications, software solutions, and open-source tools. Driven by continuous learning, efficiency, and writing clean code.</p>
+      
+      <div class="social-links">
+        <a href="mailto:adithyan@example.com" class="contact-btn">Contact Me</a>
+        <a href="https://github.com/adithyan" target="_blank" class="social-btn">GitHub</a>
+        <a href="https://linkedin.com/in/adithyan" target="_blank" class="social-btn">LinkedIn</a>
+      </div>
+    </header>
+
+    <section>
+      <h2>Skills & Technologies</h2>
+      <div class="skills-grid">
+        <span class="skill-tag">JavaScript / TypeScript</span>
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">HTML5 & CSS3</span>
+        <span class="skill-tag">React.js</span>
+        <span class="skill-tag">Node.js</span>
+        <span class="skill-tag">Git & GitHub</span>
+        <span class="skill-tag">REST APIs</span>
+        <span class="skill-tag">SQL / Databases</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Featured Projects</h2>
+      <div class="projects-grid">
+        
+        <div class="project-card">
+          <div class="project-title">Project One</div>
+          <p class="project-desc">A modern web application built using JavaScript and REST APIs. Features user authentication and interactive UI.</p>
+          <div class="project-links">
+            <a href="https://github.com/adithyan" target="_blank">View Code →</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-title">Project Two</div>
+          <p class="project-desc">Automated backend script written in Python for data processing, reporting, and workflow automation.</p>
+          <div class="project-links">
+            <a href="https://github.com/adithyan" target="_blank">View Code →</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2026 Adithyan • Hosted on GitHub Pages</p>
+    </footer>
+  </div>
+
 </body>
 </html>
