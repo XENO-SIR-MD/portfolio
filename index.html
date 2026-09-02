@@ -8,9 +8,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
   <style>
-    /* ==========================================================================
-       CSS Variables & Global Reset
-       ========================================================================== */
+
+    
     :root {
       --bg-dark: #0a0c10;
       --card-bg: rgba(22, 27, 34, 0.7);
@@ -57,9 +56,8 @@
       padding: 3rem 1.5rem;
     }
 
-    /* ==========================================================================
-       Header & Hero Section
-       ========================================================================== */
+   
+    
     header {
       background: var(--card-bg);
       backdrop-filter: blur(12px);
@@ -123,3 +121,379 @@
       font-size: 2.8rem;
       font-weight: 800;
       letter-spacing: -0.5px;
+      background: linear-gradient(135deg, #ffffff 0%, var(--text-muted) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0.2rem;
+    }
+
+    .tagline {
+      font-size: 1.2rem;
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    .bio {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      margin-bottom: 1.5rem;
+    }
+
+
+      .social-links {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--card-border);
+      color: var(--text-main);
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: var(--transition);
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: rgba(88, 166, 255, 0.1);
+      border-color: var(--primary);
+      color: var(--primary);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .btn-insta:hover {
+      background-color: rgba(225, 48, 108, 0.1);
+      border-color: var(--accent-insta);
+      color: var(--accent-insta);
+    }
+
+  
+    
+      background: var(--card-bg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 2rem;
+      margin-bottom: 2.5rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      color: var(--text-main);
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    h2 i {
+      color: var(--primary);
+    }
+
+
+        .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .skill-tag {
+      background-color: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--card-border);
+      color: var(--text-main);
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: var(--transition);
+    }
+
+    .skill-tag:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+      transform: scale(1.05);
+      background-color: rgba(88, 166, 255, 0.05);
+    }
+
+
+        .filter-bar {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .filter-btn {
+      background: none;
+      border: 1px solid var(--card-border);
+      color: var(--text-muted);
+      padding: 0.4rem 0.9rem;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .filter-btn.active, .filter-btn:hover {
+      background-color: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 650px) {
+      .projects-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .project-card {
+      background-color: rgba(0, 0, 0, 0.2);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: var(--transition);
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--primary);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    }
+
+    .project-title {
+      font-size: 1.25rem;
+      color: var(--text-main);
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+    }
+
+    .project-desc {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .project-links a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: var(--transition);
+    }
+
+    .project-links a:hover {
+      gap: 0.75rem;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 2rem 0;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      border-top: 1px solid var(--card-border);
+    }
+
+    @media (max-width: 600px) {
+      .profile-header {
+        flex-direction: column;
+        text-align: center;
+      }
+      .social-links {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <canvas id="bg-canvas"></canvas>
+
+  <div class="container">
+    <header>
+      <div class="profile-header">
+        <div class="avatar-wrapper">
+          <img src="https://github.com/XENO-SIR-MD.png" alt="Adithyan Profile Picture" class="profile-avatar">
+          <span class="status-badge" title="Available for projects"></span>
+        </div>
+        <div class="header-info">
+          <h1>Adithyan</h1>
+          <p class="tagline">Full-Stack Developer & Software Engineer</p>
+        </div>
+      </div>
+      
+      <p class="bio">Building modern web applications, scalable software solutions, and open-source tools. Dedicated to writing elegant, high-performance code.</p>
+      
+      <div class="social-links">
+        <a href="https://github.com/XENO-SIR-MD" target="_blank" class="btn">
+          <i class="fa-brands fa-github"></i> GitHub
+        </a>
+        <a href="https://www.instagram.com/4dix_thyan/" target="_blank" class="btn btn-insta">
+          <i class="fa-brands fa-instagram"></i> Instagram
+        </a>
+      </div>
+    </header>
+
+    <section>
+      <h2><i class="fa-solid fa-code"></i> Skills & Tech Stack</h2>
+      <div class="skills-grid">
+        <span class="skill-tag"><i class="fa-brands fa-js"></i> JavaScript</span>
+        <span class="skill-tag"><i class="fa-brands fa-python"></i> Python</span>
+        <span class="skill-tag"><i class="fa-brands fa-html5"></i> HTML5 / CSS3</span>
+        <span class="skill-tag"><i class="fa-brands fa-react"></i> React.js</span>
+        <span class="skill-tag"><i class="fa-brands fa-node"></i> Node.js</span>
+        <span class="skill-tag"><i class="fa-brands fa-git-alt"></i> Git & GitHub</span>
+        <span class="skill-tag"><i class="fa-solid fa-database"></i> SQL / NoSQL</span>
+        <span class="skill-tag"><i class="fa-solid fa-gears"></i> RESTful APIs</span>
+      </div>
+    </section>
+
+    <section>
+      <h2><i class="fa-solid fa-folder-open"></i> Featured Projects</h2>
+      
+      <div class="filter-bar">
+        <button class="filter-btn active" onclick="filterProjects('all')">All</button>
+        <button class="filter-btn" onclick="filterProjects('web')">Web</button>
+        <button class="filter-btn" onclick="filterProjects('script')">Python / Automation</button>
+      </div>
+
+      <div class="projects-grid">
+        <div class="project-card" data-category="web">
+          <div>
+            <div class="project-title">Portfolio Platform</div>
+            <p class="project-desc">Interactive developer portfolio featuring dynamic canvas particle effects and responsive dark UI.</p>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/XENO-SIR-MD/portfolio" target="_blank">View Code <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="script">
+          <div>
+            <div class="project-title">Automation Toolsuite</div>
+            <p class="project-desc">Python utility scripts designed for workflow automation, data scraping, and API integrations.</p>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/XENO-SIR-MD" target="_blank">View Code <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>© <span id="year"></span> Adithyan • Designed & Built for GitHub Pages</p>
+    </footer>
+  </div>
+
+  <script>
+
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+
+        function filterProjects(category) {
+      const cards = document.querySelectorAll('.project-card');
+      const buttons = document.querySelectorAll('.filter-btn');
+
+      buttons.forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+
+      cards.forEach(card => {
+        if (category === 'all' || card.getAttribute('data-category') === category) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // 3. Subtle Interactive Background Particles Canvas
+    const canvas = document.getElementById('bg-canvas');
+    const ctx = canvas.getContext('2d');
+
+    let particles = [];
+    const particleCount = 45;
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+
+    class Particle {
+      constructor() {
+        this.reset();
+      }
+
+      reset() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.size = Math.random() * 2 + 0.5;
+        this.speedX = (Math.random() - 0.5) * 0.5;
+        this.speedY = (Math.random() - 0.5) * 0.5;
+        this.opacity = Math.random() * 0.5 + 0.2;
+      }
+
+      update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+
+        if (this.x < 0 || this.x > canvas.width || this.y < 0 || this.y > canvas.height) {
+          this.reset();
+        }
+      }
+
+      draw() {
+        ctx.fillStyle = `rgba(88, 166, 255, ${this.opacity})`;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+
+    function initParticles() {
+      resizeCanvas();
+      particles = [];
+      for (let i = 0; i < particleCount; i++) {
+        particles.push(new Particle());
+      }
+    }
+
+    function animateParticles() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particles.forEach(p => {
+        p.update();
+        p.draw();
+      });
+      requestAnimationFrame(animateParticles);
+    }
+
+    window.addEventListener('resize', resizeCanvas);
+    initParticles();
+    animateParticles();
+  </script>
+</body>
+</html>
